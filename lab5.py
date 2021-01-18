@@ -37,7 +37,7 @@ def solve_game_first_player(game: np.array):
     p = list()
     u = 1 / pulp.value(prob.objective)
     for variable in prob.variables():
-        print(variable, "=", variable.varValue)
+        # print(variable, "=", variable.varValue)
         p.append(variable.varValue*u)
     print("Рішення гри (сідлова точка):")
     print(pulp.value(prob.objective))
@@ -67,7 +67,7 @@ def solve_game_second_player(game: np.array):
     p = list()
     u = 1 / pulp.value(prob.objective)
     for variable in prob.variables():
-        print(variable, "=", variable.varValue)
+        # print(variable, "=", variable.varValue)
         p.append(variable.varValue*u)
     print("Рішення гри (сідлова точка):")
     print(pulp.value(prob.objective))
